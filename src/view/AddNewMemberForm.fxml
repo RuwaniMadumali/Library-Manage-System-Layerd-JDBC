@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="root" prefHeight="605.0" prefWidth="1266.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddNewMemberController">
+   <children>
+      <Label layoutX="100.0" layoutY="29.0" text="Add Member " textFill="#4d090a">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <Button fx:id="btnHomeMenu" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#navigateToHome" prefHeight="55.0" prefWidth="57.0" textAlignment="RIGHT" textFill="#dada5d">
+         <graphic>
+            <ImageView fitHeight="48.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icons8-checklist-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="111.0" layoutY="135.0" text="Member Category : " />
+      <Label layoutX="111.0" layoutY="98.0" text="Member ID :" />
+      <Label layoutX="110.0" layoutY="212.0" text="Member Name :" />
+      <Label layoutX="112.0" layoutY="283.0" text="Member NIC No :" />
+      <Label layoutX="110.0" layoutY="358.0" text="Member Address :" />
+      <Label layoutX="539.0" layoutY="98.0" text="Gender :" />
+      <Label layoutX="534.0" layoutY="212.0" text="Contact Number : " />
+      <Label layoutX="534.0" layoutY="283.0" text="Membership Duration : " />
+      <Label layoutX="533.0" layoutY="327.0" text="Membership Expired Date : " />
+      <Label layoutX="539.0" layoutY="135.0" text="Email Address :" />
+      <JFXTextField layoutX="533.0" layoutY="233.0" prefHeight="31.0" prefWidth="246.0" />
+      <JFXTextField layoutX="107.0" layoutY="312.0" prefHeight="31.0" prefWidth="222.0" />
+      <RadioButton layoutX="607.0" layoutY="98.0" mnemonicParsing="false" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="686.0" layoutY="98.0" mnemonicParsing="false" text="Female" toggleGroup="$gender" />
+      <RadioButton layoutX="778.0" layoutY="98.0" mnemonicParsing="false" text="Other" toggleGroup="$gender" />
+      <JFXTextField layoutX="539.0" layoutY="163.0" prefHeight="31.0" prefWidth="239.0" />
+      <Label layoutX="210.0" layoutY="98.0" text="ASD00001" />
+      <JFXTextField layoutX="112.0" layoutY="233.0" prefHeight="31.0" prefWidth="290.0" />
+      <Label layoutX="705.0" layoutY="283.0" text="1 Day" />
+      <JFXTextArea layoutX="107.0" layoutY="394.0" prefHeight="91.0" prefWidth="382.0" />
+      <JFXComboBox fx:id="memberCategoryCmbbx" layoutX="112.0" layoutY="163.0" prefHeight="31.0" prefWidth="212.0" />
+      <ImageView fitHeight="173.0" fitWidth="174.0" layoutX="972.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/member-profile.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="735.0" layoutY="327.0" text="21 - Aug -2020" />
+      <JFXButton layoutX="843.0" layoutY="418.0" prefHeight="55.0" prefWidth="143.0" ripplerFill="#d1ee7f" style="-fx-background-color: #4fbf55;" text="Save">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="1008.0" layoutY="418.0" prefHeight="55.0" prefWidth="143.0" ripplerFill="#f2b5a2" style="-fx-background-color: #ce6846;" text="Cancel">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
