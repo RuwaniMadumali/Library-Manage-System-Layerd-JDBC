@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="root" prefHeight="618.0" prefWidth="1047.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MembershipUpdationController">
+   <children>
+      <Label layoutX="132.0" layoutY="32.0" text="Membership Updation">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="466.0" layoutY="473.0" prefHeight="55.0" prefWidth="395.0" ripplerFill="#d1ee7f" style="-fx-background-color: #4fbf55;" text="Update Membership">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </JFXButton>
+      <Button fx:id="btnSearchMember" layoutX="951.0" layoutY="14.0" mnemonicParsing="false" onAction="#navigateToSearchMember" prefHeight="66.0" prefWidth="71.0" textAlignment="RIGHT" textFill="#dada5d">
+         <graphic>
+            <ImageView fitHeight="57.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icons8-find-user-male-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnHomeMenu" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#navigateToHome" prefHeight="66.0" prefWidth="78.0" textAlignment="RIGHT" textFill="#dada5d">
+         <graphic>
+            <ImageView fitHeight="58.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icons8-checklist-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="121.0" layoutY="158.0" text="Member ID :" />
+      <Label layoutX="121.0" layoutY="203.0" text="Member NIC No :" />
+      <Label layoutX="220.0" layoutY="158.0" text="ASD00001">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="255.0" layoutY="203.0" text="916690185v">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="121.0" layoutY="240.0" text="Member Name :" />
+      <Label layoutX="240.0" layoutY="240.0" text="Ruwani Madumali">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="551.0" layoutY="150.0" text="Current Member Category : " />
+      <Label layoutX="552.0" layoutY="240.0" text="Select New Member Category : " />
+      <JFXComboBox fx:id="memberCategoryCmbbx" layoutX="551.0" layoutY="279.0" onAction="#getComboSelection" prefHeight="31.0" prefWidth="212.0" />
+      <Label layoutX="554.0" layoutY="351.0" text="Membership Fee : " />
+      <ImageView fitHeight="95.0" fitWidth="123.0" layoutX="799.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/free-membership.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="693.0" layoutY="342.0" text="Rs .">
+         <font>
+            <Font name="Book Antiqua" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPriceMembership" layoutX="750.0" layoutY="344.0" text="1200.00">
+         <font>
+            <Font name="Book Antiqua" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="855.0" layoutY="342.0" text="/-">
+         <font>
+            <Font name="Book Antiqua" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgNewMembership" fitHeight="75.0" fitWidth="78.0" layoutX="831.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/bronze.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

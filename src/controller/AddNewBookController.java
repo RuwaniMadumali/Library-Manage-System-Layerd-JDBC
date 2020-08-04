@@ -5,37 +5,34 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.Spinner;
+import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
 
-public class SearchMemberController {
+public class AddNewBookController {
+
 
     public Button btnHomeMenu;
-    public Button btnAddMember;
     public AnchorPane root;
-    public TableView<String> tableView;
+    public Spinner<Integer> spnrNoOfPage;
+
+    final  int initValue=100;
+
+    SpinnerValueFactory<Integer> svf =new SpinnerValueFactory.IntegerSpinnerValueFactory(1,5000,initValue);
 
     public void initialize(){
-        /*tableView.getColumns().get(0).setCellFactory(new PropertyValueFactory<>());*/
+        spnrNoOfPage.setValueFactory(svf);
+
 
     }
+
 
     public void navigateToHome(ActionEvent actionEvent) throws IOException {
         URL resource = this.getClass().getResource("/view/HomePage.fxml");
-        Parent root = FXMLLoader.load(resource);
-        Scene scene = new Scene(root);
-        Stage primaryStage = (Stage) (this.root.getScene().getWindow());
-        primaryStage.setScene(scene);
-        primaryStage.centerOnScreen();
-    }
-
-    public void navigateToAddMember(ActionEvent actionEvent) throws IOException {
-        URL resource = this.getClass().getResource("/view/AddNewMemberForm.fxml");
         Parent root = FXMLLoader.load(resource);
         Scene scene = new Scene(root);
         Stage primaryStage = (Stage) (this.root.getScene().getWindow());
