@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="837.0" prefWidth="1385.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchMemberController">
+   <children>
+      <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="69.0" textAlignment="RIGHT" textFill="#dada5d">
+         <graphic>
+            <ImageView fitHeight="58.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icons8-checklist-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="122.0" layoutY="30.0" text="Search Member">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <RadioButton layoutX="164.0" layoutY="119.0" mnemonicParsing="false" text="Member ID : " />
+      <RadioButton layoutX="426.0" layoutY="119.0" mnemonicParsing="false" text="Member NIC : " />
+      <RadioButton layoutX="684.0" layoutY="119.0" mnemonicParsing="false" text="Member Name : " />
+      <JFXTextField layoutX="164.0" layoutY="152.0" />
+      <JFXTextField layoutX="429.0" layoutY="152.0" />
+      <JFXTextField layoutX="684.0" layoutY="152.0" />
+      <Button layoutX="1279.0" layoutY="10.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="76.0" textAlignment="RIGHT" textFill="#dada5d">
+         <graphic>
+            <ImageView fitHeight="66.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icons8-add-user-group-man-man-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <JFXButton layoutX="933.0" layoutY="108.0" prefHeight="40.0" prefWidth="139.0" style="-fx-background-color: #db9039;" text="Search " textFill="#141313">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="933.0" layoutY="183.0" prefHeight="45.0" prefWidth="140.0" style="-fx-background-color: #e44a52;" text="Search All " textFill="#100f0f">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <TableView layoutX="18.0" layoutY="246.0" prefHeight="550.0" prefWidth="1349.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="ID" />
+          <TableColumn prefWidth="130.0" text="NIC" />
+            <TableColumn prefWidth="209.0" text="Name" />
+            <TableColumn prefWidth="251.0" text="Address" />
+            <TableColumn prefWidth="196.0" text="Email" />
+            <TableColumn prefWidth="70.0" text="Gender" />
+            <TableColumn prefWidth="70.0" text="Category" />
+            <TableColumn prefWidth="122.0" text="Expire Date" />
+            <TableColumn prefWidth="225.0" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
