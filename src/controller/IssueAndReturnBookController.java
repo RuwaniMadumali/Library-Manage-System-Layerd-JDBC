@@ -15,6 +15,10 @@ public class IssueAndReturnBookController {
     public Button btnHomeMenu;
     public AnchorPane root;
 
+    public void initialize(){
+
+    }
+
     public void navigateToHome(ActionEvent actionEvent) throws IOException {
         URL resource = this.getClass().getResource("/view/HomePage.fxml");
         Parent root = FXMLLoader.load(resource);

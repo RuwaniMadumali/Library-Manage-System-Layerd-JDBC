@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Tooltip;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -18,6 +19,19 @@ public class HomeFormController {
     public Button btnAddBook;
     public Button btnSearchBook;
     public Button btnIssueAndReturn;
+    public Tooltip ttAddNewMember;
+    public Tooltip ttSearchMember;
+    public Tooltip ttAddNewBook;
+    public Tooltip ttSearchBook;
+    public Tooltip ttIssueReturnBook;
+    public Tooltip ttReport;
+    public Tooltip ttSettings;
+    public Tooltip ttMore;
+    public Tooltip ttDashboard;
+
+    public void initialize(){
+//setTooltip(new Tooltip("Tooltip for Button"));
+    }
 
     public void navigateToAddMember(ActionEvent actionEvent) throws IOException {
         URL resource = this.getClass().getResource("/view/AddNewMemberForm.fxml");

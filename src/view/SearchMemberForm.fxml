@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" prefHeight="837.0" prefWidth="1385.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchMemberController">
+<AnchorPane fx:id="root" prefHeight="837.0" prefWidth="1473.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchMemberController">
    <children>
       <Button fx:id="btnHomeMenu" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#navigateToHome" prefHeight="69.0" prefWidth="69.0" textAlignment="RIGHT" textFill="#dada5d">
          <graphic>
@@ -57,17 +57,18 @@
             <Font name="System Bold" size="19.0" />
          </font>
       </JFXButton>
-      <TableView fx:id="tableView" layoutX="18.0" layoutY="246.0" prefHeight="550.0" prefWidth="1349.0">
+      <TableView fx:id="tableView" layoutX="10.0" layoutY="239.0" prefHeight="550.0" prefWidth="1440.0">
         <columns>
           <TableColumn prefWidth="75.0" text="ID" />
           <TableColumn prefWidth="130.0" text="NIC" />
             <TableColumn prefWidth="209.0" text="Name" />
-            <TableColumn prefWidth="251.0" text="Address" />
-            <TableColumn prefWidth="196.0" text="Email" />
-            <TableColumn prefWidth="70.0" text="Gender" />
-            <TableColumn prefWidth="70.0" text="Category" />
-            <TableColumn prefWidth="122.0" text="Expire Date" />
-            <TableColumn prefWidth="225.0" />
+            <TableColumn prefWidth="212.0" text="Address" />
+            <TableColumn prefWidth="156.0" text="Email" />
+            <TableColumn prefWidth="94.0" text="Gender" />
+            <TableColumn prefWidth="131.0" text="Contact No" />
+            <TableColumn prefWidth="113.0" text="Category" />
+            <TableColumn prefWidth="112.0" text="Expire Date" />
+            <TableColumn prefWidth="207.0" />
         </columns>
       </TableView>
    </children>
