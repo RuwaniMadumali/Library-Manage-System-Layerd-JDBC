@@ -51,15 +51,15 @@
       </JFXButton>
       <TableView fx:id="tableView" layoutX="18.0" layoutY="246.0" prefHeight="550.0" prefWidth="1349.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="ID" />
-          <TableColumn prefWidth="130.0" text="NIC" />
+          <TableColumn fx:id="columnID" prefWidth="75.0" text="ID" />
+          <TableColumn prefWidth="130.0" text="Category" />
             <TableColumn prefWidth="209.0" text="Name" />
-            <TableColumn prefWidth="251.0" text="Address" />
-            <TableColumn prefWidth="196.0" text="Email" />
-            <TableColumn prefWidth="70.0" text="Gender" />
-            <TableColumn prefWidth="70.0" text="Category" />
-            <TableColumn prefWidth="122.0" text="Expire Date" />
-            <TableColumn prefWidth="225.0" />
+            <TableColumn prefWidth="173.0" text="Author" />
+            <TableColumn prefWidth="142.0" text="Edition" />
+            <TableColumn prefWidth="98.0" text="Price" />
+            <TableColumn prefWidth="94.0" text="No of Pages" />
+            <TableColumn prefWidth="216.0" text="Description" />
+            <TableColumn prefWidth="211.0" />
         </columns>
       </TableView>
       <RadioButton layoutX="900.0" layoutY="120.0" mnemonicParsing="false" text="Book Category :" toggleGroup="$SearchType" />

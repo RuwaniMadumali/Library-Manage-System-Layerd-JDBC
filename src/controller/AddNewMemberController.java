@@ -51,7 +51,6 @@ public class AddNewMemberController {
         Formatter fmt = new Formatter();
         lblexpdate.setText(date+" - "+fmt.format("%tB ", cal)+" - "+year);
 
-
     }
 
 

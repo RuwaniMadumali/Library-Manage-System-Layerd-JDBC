@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="681.0" prefWidth="538.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <AnchorPane prefHeight="66.0" prefWidth="538.0" style="-fx-background-color: #489EE7;">
+         <children>
+            <ImageView fitHeight="56.0" fitWidth="156.0" layoutX="191.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/elekta-logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="52.0" layoutY="94.0" prefHeight="21.0" prefWidth="379.0" text="Create your account here. It's take only one minute..." />
+      <TextField layoutX="52.0" layoutY="145.0" prefHeight="51.0" prefWidth="447.0" promptText="Staff ID" style="-fx-alignment: center;" />
+      <JFXButton layoutX="69.0" layoutY="580.0" prefHeight="34.0" prefWidth="415.0" style="-fx-background-color: #489EE7; -fx-background-radius: 5px;" text="Register" textFill="#f1f1f1">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <Hyperlink layoutX="244.0" layoutY="614.0" text="Sign in">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Hyperlink>
+      <TextField layoutX="53.0" layoutY="220.0" prefHeight="51.0" prefWidth="447.0" promptText="Name" style="-fx-alignment: center;" />
+      <TextField layoutX="53.0" layoutY="363.0" prefHeight="51.0" prefWidth="447.0" promptText="User Name" style="-fx-alignment: center;" />
+      <TextField layoutX="53.0" layoutY="435.0" prefHeight="51.0" prefWidth="447.0" promptText="Password" style="-fx-alignment: center;" />
+      <TextField layoutX="53.0" layoutY="295.0" prefHeight="51.0" prefWidth="447.0" promptText="Position" style="-fx-alignment: center;" />
+      <PasswordField layoutX="183.0" layoutY="519.0" promptText="Key" />
+   </children>
+</AnchorPane>
