@@ -58,6 +58,6 @@ public class StaffDAOImpl implements StaffDAO {
 
     @Override
     public boolean delete(String key) throws Exception {
-        return false;
+        return CrudUtil.execute("DELETE FROM Staff WHERE staffID=?",key);
     }
 }

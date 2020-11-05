@@ -30,39 +30,40 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <RadioButton layoutX="93.0" layoutY="120.0" mnemonicParsing="false" text="Book ID : ">
+      <RadioButton fx:id="rbtnBookID" layoutX="93.0" layoutY="120.0" mnemonicParsing="false" onAction="#rbtnClickBookIDAction" text="Book ID">
          <toggleGroup>
             <ToggleGroup fx:id="SearchType" />
          </toggleGroup></RadioButton>
-      <RadioButton layoutX="346.0" layoutY="120.0" mnemonicParsing="false" text="Book Title : " toggleGroup="$SearchType" />
-      <RadioButton layoutX="626.0" layoutY="121.0" mnemonicParsing="false" text="Author : " toggleGroup="$SearchType" />
-      <JFXTextField layoutX="93.0" layoutY="153.0" />
-      <JFXTextField layoutX="349.0" layoutY="153.0" prefHeight="31.0" prefWidth="223.0" />
-      <JFXTextField layoutX="626.0" layoutY="154.0" prefHeight="31.0" prefWidth="223.0" />
-      <JFXButton layoutX="1158.0" layoutY="100.0" prefHeight="40.0" prefWidth="139.0" style="-fx-background-color: #db9039;" text="Search " textFill="#141313">
+      <RadioButton fx:id="rbtnBookTitle" layoutX="346.0" layoutY="120.0" mnemonicParsing="false" onAction="#rbtnClickBookTitleAction" text="Book Title" toggleGroup="$SearchType" />
+      <RadioButton fx:id="rbtnAuthor" layoutX="626.0" layoutY="121.0" mnemonicParsing="false" onAction="#rbtnClickAuthorAction" text="Author" toggleGroup="$SearchType" />
+      <JFXTextField fx:id="txtbookID" layoutX="93.0" layoutY="153.0" />
+      <JFXTextField fx:id="txtbookTitle" layoutX="349.0" layoutY="153.0" prefHeight="31.0" prefWidth="223.0" />
+      <JFXTextField fx:id="txtauthor" layoutX="626.0" layoutY="154.0" prefHeight="31.0" prefWidth="223.0" />
+      <JFXButton fx:id="btnSearch" layoutX="1158.0" layoutY="100.0" onAction="#searchAction" prefHeight="31.0" prefWidth="125.0" style="-fx-background-color: #db9039; -fx-background-radius: 20px;" text="Search " textFill="#313231">
          <font>
-            <Font name="System Bold" size="19.0" />
+            <Font size="17.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="1158.0" layoutY="175.0" prefHeight="45.0" prefWidth="140.0" style="-fx-background-color: #e44a52;" text="Search All " textFill="#100f0f">
+      <JFXButton fx:id="btnSeearchAll" layoutX="1158.0" layoutY="166.0" onAction="#searchAllAction" prefHeight="38.0" prefWidth="125.0" style="-fx-background-color: #e44a52; -fx-background-radius: 20px;" text="Search All " textFill="#100f0f">
          <font>
-            <Font name="System Bold" size="19.0" />
+            <Font size="17.0" />
          </font>
       </JFXButton>
-      <TableView fx:id="tableView" layoutX="18.0" layoutY="246.0" prefHeight="550.0" prefWidth="1349.0">
+      <TableView fx:id="tableView" layoutX="19.0" layoutY="246.0" prefHeight="550.0" prefWidth="1348.0">
         <columns>
           <TableColumn fx:id="columnID" prefWidth="75.0" text="ID" />
-          <TableColumn prefWidth="130.0" text="Category" />
-            <TableColumn prefWidth="209.0" text="Name" />
-            <TableColumn prefWidth="173.0" text="Author" />
-            <TableColumn prefWidth="142.0" text="Edition" />
-            <TableColumn prefWidth="98.0" text="Price" />
-            <TableColumn prefWidth="94.0" text="No of Pages" />
-            <TableColumn prefWidth="216.0" text="Description" />
-            <TableColumn prefWidth="211.0" />
+          <TableColumn fx:id="columnCategory" prefWidth="130.0" text="Category" />
+            <TableColumn fx:id="columnName" prefWidth="209.0" text="Name" />
+            <TableColumn fx:id="columnAuthor" prefWidth="173.0" text="Author" />
+            <TableColumn fx:id="columnEdition" prefWidth="142.0" text="Edition" />
+            <TableColumn fx:id="columnPrice" prefWidth="98.0" text="Price" />
+            <TableColumn fx:id="columnNoOfPages" prefWidth="94.0" text="No of Pages" />
+            <TableColumn fx:id="columnDescription" prefWidth="216.0" text="Description" />
+            <TableColumn fx:id="columnDescription1" prefWidth="105.0" />
+            <TableColumn fx:id="columnDescription11" prefWidth="115.0" />
         </columns>
       </TableView>
-      <RadioButton layoutX="900.0" layoutY="120.0" mnemonicParsing="false" text="Book Category :" toggleGroup="$SearchType" />
+      <RadioButton fx:id="rbtnBookCategory" layoutX="900.0" layoutY="120.0" mnemonicParsing="false" onAction="#rbtnClickBookCategoryAction" text="Book Category" toggleGroup="$SearchType" />
       <JFXComboBox fx:id="memberCategoryCmbbx" layoutX="900.0" layoutY="160.0" prefHeight="31.0" prefWidth="212.0" />
       <Button fx:id="btnAddBook" layoutX="1290.0" layoutY="14.0" mnemonicParsing="false" onAction="#navigateToAddBook" prefHeight="69.0" prefWidth="68.0" textAlignment="RIGHT" textFill="#dada5d">
          <graphic>

@@ -1,4 +1,6 @@
 package bussiness.custom;
 
-public interface ReceiptBO {
+import bussiness.SuperBO;
+
+public interface ReceiptBO extends SuperBO {
 }

@@ -1,23 +1,41 @@
 package util;
 
+import javafx.scene.control.CheckBox;
+
 import java.sql.Date;
 
 public class ReturnsTM {
+    private CheckBox checkBox;
     private String issueNo;
     private String bookID;
-    private Date returnDate;
-    private Date actualReturnDate;
-    private String issueStaffID;
+    private String bookTitle;
+    private double lateFee;
 
-    public ReturnsTM() {
+    public ReturnsTM() {}
+
+    public ReturnsTM(String issueNo) {
+        this.issueNo = issueNo;
     }
 
-    public ReturnsTM(String issueNo, String bookID, Date returnDate, Date actualReturnDate, String issueStaffID) {
+    public ReturnsTM(String issueNo, String bookID) {
         this.issueNo = issueNo;
         this.bookID = bookID;
-        this.returnDate = returnDate;
-        this.actualReturnDate = actualReturnDate;
-        this.issueStaffID = issueStaffID;
+    }
+
+    public ReturnsTM(CheckBox checkBox, String issueNo, String bookID, String bookTitle, double lateFee) {
+        this.checkBox = checkBox;
+        this.issueNo = issueNo;
+        this.bookID = bookID;
+        this.bookTitle = bookTitle;
+        this.lateFee = lateFee;
+    }
+
+    public CheckBox getCheckBox() {
+        return checkBox;
+    }
+
+    public void setCheckBox(CheckBox checkBox) {
+        this.checkBox = checkBox;
     }
 
     public String getIssueNo() {
@@ -36,28 +54,20 @@ public class ReturnsTM {
         this.bookID = bookID;
     }
 
-    public Date getReturnDate() {
-        return returnDate;
+    public String getBookTitle() {
+        return bookTitle;
     }
 
-    public void setReturnDate(Date returnDate) {
-        this.returnDate = returnDate;
+    public void setBookTitle(String bookTitle) {
+        this.bookTitle = bookTitle;
     }
 
-    public Date getActualReturnDate() {
-        return actualReturnDate;
+    public double getLateFee() {
+        return lateFee;
     }
 
-    public void setActualReturnDate(Date actualReturnDate) {
-        this.actualReturnDate = actualReturnDate;
-    }
-
-    public String getIssueStaffID() {
-        return issueStaffID;
-    }
-
-    public void setIssueStaffID(String issueStaffID) {
-        this.issueStaffID = issueStaffID;
+    public void setLateFee(double lateFee) {
+        this.lateFee = lateFee;
     }
 
     @Override
@@ -65,9 +75,8 @@ public class ReturnsTM {
         return "ReturnsTM{" +
                 "issueNo='" + issueNo + '\'' +
                 ", bookID='" + bookID + '\'' +
-                ", returnDate=" + returnDate +
-                ", actualReturnDate=" + actualReturnDate +
-                ", issueStaffID='" + issueStaffID + '\'' +
+                ", bookTitle='" + bookTitle + '\'' +
+                ", lateFee=" + lateFee +
                 '}';
     }
 }

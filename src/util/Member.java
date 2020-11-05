@@ -1,5 +1,7 @@
 package util;
 
+import com.jfoenix.controls.JFXButton;
+
 import java.awt.*;
 import java.sql.Date;
 
@@ -13,12 +15,19 @@ public class Member {
     private String contactNo;
     private String category;
     private Date expDate;
-    private Button button;
+    private JFXButton deleteButton;
+    private JFXButton updateButton;
+    private int count;
 
     public Member() {
     }
 
-    public Member(String id, String nic, String name, String address, String email, String gender, String contactNo, String category, Date expDate, Button button) {
+    public Member(String category, int count) {
+        this.category = category;
+        this.count = count;
+    }
+
+    public Member(String id, String nic, String name, String address, String email, String gender, String contactNo, String category, Date expDate) {
         this.id = id;
         this.nic = nic;
         this.name = name;
@@ -28,7 +37,20 @@ public class Member {
         this.contactNo = contactNo;
         this.category = category;
         this.expDate = expDate;
-        this.button = button;
+    }
+
+    public Member(String id, String nic, String name, String address, String email, String gender, String contactNo, String category, Date expDate, JFXButton deleteButton,JFXButton updateButton) {
+        this.id = id;
+        this.nic = nic;
+        this.name = name;
+        this.address = address;
+        this.email = email;
+        this.gender = gender;
+        this.contactNo = contactNo;
+        this.category = category;
+        this.expDate = expDate;
+        this.deleteButton = deleteButton;
+        this.updateButton=updateButton;
     }
 
     public String getId() {
@@ -103,13 +125,13 @@ public class Member {
         this.expDate = expDate;
     }
 
-    public Button getButton() {
-        return button;
-    }
+    public JFXButton getDeleteButton() { return deleteButton; }
 
-    public void setButton(Button button) {
-        this.button = button;
-    }
+    public void setDeleteButton(JFXButton deleteButton) { this.deleteButton = deleteButton; }
+
+    public JFXButton getUpdateButton() { return updateButton; }
+
+    public void setUpdateButton(JFXButton updateButton) { this.updateButton = updateButton; }
 
     @Override
     public String toString() {
@@ -123,7 +145,7 @@ public class Member {
                 ", contactNo='" + contactNo + '\'' +
                 ", category='" + category + '\'' +
                 ", expDate=" + expDate +
-                ", button=" + button +
+                ", count=" + count +
                 '}';
     }
 }

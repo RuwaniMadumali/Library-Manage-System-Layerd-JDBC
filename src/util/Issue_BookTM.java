@@ -13,6 +13,10 @@ public class Issue_BookTM {
     public Issue_BookTM() {
     }
 
+    public Issue_BookTM(String bookID) {
+        this.bookID = bookID;
+    }
+
     public Issue_BookTM(String issueNo, String bookID, String memberID, Date issueDate, Date returnDate, String issueStaffID) {
         this.issueNo = issueNo;
         this.bookID = bookID;

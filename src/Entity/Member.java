@@ -4,6 +4,7 @@ import java.sql.Date;
 
 public class Member implements SuperEntity{
     private String memberID;
+    private String memberNIC;
     private String mName;
     private String mType;
     private String mAddress;
@@ -12,12 +13,31 @@ public class Member implements SuperEntity{
     private String mPhoneNo;
     private Date mAddDate;
     private Date mExpDate;
+    private int count;
 
     public Member() {
     }
 
-    public Member(String memberID, String mName, String mType, String mAddress, String mEmail, String gender, String mPhoneNo, Date mAddDate, Date mExpDate) {
+    public Member(String mType, int count) {
+        this.mType = mType;
+        this.count = count;
+    }
+
+    public Member(String memberID, String memberNIC, String mName, String mAddress, String mEmail, String gender, String mPhoneNo, String mType, Date mExpDate) {
         this.memberID = memberID;
+        this.memberNIC = memberNIC;
+        this.mName = mName;
+        this.mType = mType;
+        this.mAddress = mAddress;
+        this.mEmail = mEmail;
+        this.gender = gender;
+        this.mPhoneNo = mPhoneNo;
+        this.mExpDate = mExpDate;
+    }
+
+    public Member(String memberID, String memberNIC, String mName, String mType, String mAddress, String mEmail, String gender, String mPhoneNo, Date mAddDate, Date mExpDate) {
+        this.memberID = memberID;
+        this.memberNIC = memberNIC;
         this.mName = mName;
         this.mType = mType;
         this.mAddress = mAddress;
@@ -27,6 +47,7 @@ public class Member implements SuperEntity{
         this.mAddDate = mAddDate;
         this.mExpDate = mExpDate;
     }
+
 
     public String getMemberID() {
         return memberID;
@@ -100,10 +121,23 @@ public class Member implements SuperEntity{
         this.mExpDate = mExpDate;
     }
 
+    public String getMemberNIC() { return memberNIC; }
+
+    public void setMemberNIC(String memberNIC) { this.memberNIC = memberNIC; }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+
     @Override
     public String toString() {
         return "Member{" +
                 "memberID='" + memberID + '\'' +
+                ", memberNIC='" + memberNIC + '\'' +
                 ", mName='" + mName + '\'' +
                 ", mType='" + mType + '\'' +
                 ", mAddress='" + mAddress + '\'' +
@@ -112,6 +146,7 @@ public class Member implements SuperEntity{
                 ", mPhoneNo='" + mPhoneNo + '\'' +
                 ", mAddDate=" + mAddDate +
                 ", mExpDate=" + mExpDate +
+                ", count=" + count +
                 '}';
     }
 }

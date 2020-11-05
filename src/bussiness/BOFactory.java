@@ -30,10 +30,12 @@ public class BOFactory {
                 return (T) new ReceiptBOImpl();
             case RENEWAL_PAYMENT:
                 return (T) new Renewal_PaymentBOImpl();
-            case RETURNS:
-                return (T) new ReturnsBOImpl();
             case STAFF:
                 return (T) new StaffBOImpl();
+            case CUSTOM:
+                return (T) new IssueAndReturnsBOImpl();
+
+
             default:
                 return null;
         }

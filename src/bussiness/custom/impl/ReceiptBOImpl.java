@@ -1,4 +1,6 @@
 package bussiness.custom.impl;
 
-public class ReceiptBOImpl {
+import bussiness.custom.ReceiptBO;
+
+public class ReceiptBOImpl implements ReceiptBO {
 }

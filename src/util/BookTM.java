@@ -17,6 +17,16 @@ public class BookTM {
 
     public BookTM() {
     }
+    public BookTM(String bookID, String bCategoryID, String bName, String bAuthor, String bEdition, double bPrice,  int bNoOfPages,String bDescription) {
+        this.bookID = bookID;
+        this.bCategoryID = bCategoryID;
+        this.bName = bName;
+        this.bDescription = bDescription;
+        this.bEdition = bEdition;
+        this.bAuthor = bAuthor;
+        this.bNoOfPages = bNoOfPages;
+        this.bPrice = bPrice;
+    }
 
     public BookTM(String bookID, String bCategoryID, String bName, String bDescription, String bEdition, String bAuthor, int bNoOfPages, double bPrice, String pathToImage, Date bAddDate) {
         this.bookID = bookID;

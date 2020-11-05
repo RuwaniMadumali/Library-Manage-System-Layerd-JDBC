@@ -3,6 +3,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
@@ -19,7 +20,7 @@ public class AppInitializer extends Application {
         Scene mainScene = new Scene(root);
         primaryStage.setScene(mainScene);
 
-        primaryStage.setTitle("JDBC POS");
+        primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.centerOnScreen();
 
         primaryStage.show();

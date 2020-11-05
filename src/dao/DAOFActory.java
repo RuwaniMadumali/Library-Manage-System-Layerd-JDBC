@@ -36,6 +36,8 @@ public class DAOFActory {
                 return (T) new ReturnsDAOImpl();
             case STAFF:
                 return (T) new StaffDAOImpl();
+            case QUERRY:
+                return (T) new QueryDAOImpl();
             default:
                 return null;
         }

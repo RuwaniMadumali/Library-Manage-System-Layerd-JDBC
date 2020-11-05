@@ -29,15 +29,15 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <RadioButton layoutX="164.0" layoutY="119.0" mnemonicParsing="false" text="Member ID : ">
+      <RadioButton fx:id="rbtnMemberID" layoutX="164.0" layoutY="119.0" mnemonicParsing="false" onAction="#rbtnClickMemberIdAction" text="Member ID : ">
          <toggleGroup>
             <ToggleGroup fx:id="SearchType" />
          </toggleGroup></RadioButton>
-      <RadioButton layoutX="426.0" layoutY="119.0" mnemonicParsing="false" text="Member NIC : " toggleGroup="$SearchType" />
-      <RadioButton layoutX="684.0" layoutY="119.0" mnemonicParsing="false" text="Member Name : " toggleGroup="$SearchType" />
-      <JFXTextField layoutX="164.0" layoutY="152.0" />
-      <JFXTextField layoutX="429.0" layoutY="152.0" />
-      <JFXTextField layoutX="684.0" layoutY="152.0" />
+      <RadioButton fx:id="rbtnMemberNIC" layoutX="426.0" layoutY="119.0" mnemonicParsing="false" onAction="#rbtnClickMemberNICAction" text="Member NIC : " toggleGroup="$SearchType" />
+      <RadioButton fx:id="rbtnMemberName" layoutX="684.0" layoutY="119.0" mnemonicParsing="false" onAction="#rbtnClickMemberNameAction" text="Member Name : " toggleGroup="$SearchType" />
+      <JFXTextField fx:id="txtmemberID" layoutX="164.0" layoutY="152.0" />
+      <JFXTextField fx:id="txtmemberNIC" layoutX="429.0" layoutY="152.0" />
+      <JFXTextField fx:id="txtmemberName" layoutX="684.0" layoutY="152.0" />
       <Button fx:id="btnAddMember" layoutX="1279.0" layoutY="10.0" mnemonicParsing="false" onAction="#navigateToAddMember" prefHeight="69.0" prefWidth="76.0" textAlignment="RIGHT" textFill="#dada5d">
          <graphic>
             <ImageView fitHeight="66.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
@@ -47,16 +47,6 @@
             </ImageView>
          </graphic>
       </Button>
-      <JFXButton layoutX="933.0" layoutY="108.0" prefHeight="40.0" prefWidth="139.0" style="-fx-background-color: #db9039;" text="Search " textFill="#141313">
-         <font>
-            <Font name="System Bold" size="19.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="933.0" layoutY="183.0" prefHeight="45.0" prefWidth="140.0" style="-fx-background-color: #e44a52;" text="Search All " textFill="#100f0f">
-         <font>
-            <Font name="System Bold" size="19.0" />
-         </font>
-      </JFXButton>
       <TableView fx:id="tableView" layoutX="10.0" layoutY="239.0" prefHeight="550.0" prefWidth="1440.0">
         <columns>
           <TableColumn prefWidth="75.0" text="ID" />
@@ -68,8 +58,19 @@
             <TableColumn prefWidth="131.0" text="Contact No" />
             <TableColumn prefWidth="113.0" text="Category" />
             <TableColumn prefWidth="112.0" text="Expire Date" />
-            <TableColumn prefWidth="207.0" />
+            <TableColumn prefWidth="106.0" />
+            <TableColumn prefWidth="101.0" />
         </columns>
       </TableView>
+      <JFXButton fx:id="btnSeearchAll" layoutX="940.0" layoutY="176.0" onAction="#searchAllAction" prefHeight="38.0" prefWidth="125.0" style="-fx-background-color: #e44a52; -fx-background-radius: 20px;" text="Search All " textFill="#100f0f">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnSearch" layoutX="940.0" layoutY="111.0" onAction="#searchAction" prefHeight="31.0" prefWidth="125.0" style="-fx-background-color: #db9039; -fx-background-radius: 20px;" text="Search " textFill="#313231">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

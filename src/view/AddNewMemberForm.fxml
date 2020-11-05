@@ -12,11 +12,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" prefHeight="605.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddNewMemberController">
+<AnchorPane fx:id="root" prefHeight="605.0" prefWidth="1268.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddNewMemberController">
    <children>
-      <Label layoutX="100.0" layoutY="29.0" text="Add Member " textFill="#4d090a">
+      <Label fx:id="lblhead" layoutX="100.0" layoutY="29.0" text="Add Member " textFill="#4d090a">
          <font>
-            <Font size="17.0" />
+            <Font size="27.0" />
          </font></Label>
       <Button fx:id="btnHomeMenu" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#navigateToHome" prefHeight="55.0" prefWidth="57.0" textAlignment="RIGHT" textFill="#dada5d">
          <graphic>
@@ -27,55 +27,53 @@
             </ImageView>
          </graphic>
       </Button>
-      <Label layoutX="111.0" layoutY="135.0" text="Member Category : " />
+      <Label layoutX="858.0" layoutY="249.0" text="Member Category : " />
       <Label layoutX="111.0" layoutY="98.0" text="Member ID :" />
-      <Label layoutX="110.0" layoutY="212.0" text="Member Name :" />
-      <Label layoutX="112.0" layoutY="283.0" text="Member NIC No :" />
-      <Label layoutX="110.0" layoutY="358.0" text="Member Address :" />
-      <Label layoutX="539.0" layoutY="98.0" text="Gender :" />
-      <Label layoutX="534.0" layoutY="212.0" text="Contact Number : " />
-      <Label layoutX="534.0" layoutY="283.0" text="Membership Duration : " />
-      <Label layoutX="533.0" layoutY="327.0" text="Membership Expired Date : " />
-      <Label layoutX="539.0" layoutY="135.0" text="Email Address :" />
-      <JFXTextField layoutX="533.0" layoutY="233.0" prefHeight="31.0" prefWidth="246.0" />
-      <JFXTextField layoutX="107.0" layoutY="312.0" prefHeight="31.0" prefWidth="222.0" />
-      <RadioButton layoutX="607.0" layoutY="98.0" mnemonicParsing="false" text="Male">
+      <Label layoutX="114.0" layoutY="130.0" text="Member Name :" />
+      <Label layoutX="116.0" layoutY="201.0" text="Member NIC No :" />
+      <Label layoutX="114.0" layoutY="276.0" text="Member Address :" />
+      <Label layoutX="542.0" layoutY="129.0" text="Gender :" />
+      <Label layoutX="537.0" layoutY="243.0" text="Contact Number : " />
+      <Label layoutX="855.0" layoutY="292.0" text="Membership Duration : " />
+      <Label layoutX="854.0" layoutY="336.0" text="Membership Expired Date : " />
+      <Label layoutX="542.0" layoutY="166.0" text="Email Address :" />
+      <JFXTextField fx:id="txtMemberContactNo" layoutX="536.0" layoutY="264.0" prefHeight="31.0" prefWidth="246.0" />
+      <JFXTextField fx:id="txtMemberNIC" layoutX="111.0" layoutY="230.0" prefHeight="31.0" prefWidth="222.0" />
+      <RadioButton fx:id="rbtnMale" layoutX="610.0" layoutY="129.0" mnemonicParsing="false" text="Male">
          <toggleGroup>
             <ToggleGroup fx:id="gender" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton layoutX="686.0" layoutY="98.0" mnemonicParsing="false" text="Female" toggleGroup="$gender" />
-      <JFXTextField layoutX="539.0" layoutY="163.0" prefHeight="31.0" prefWidth="239.0" />
-      <Label fx:id="lblMemberID" layoutX="210.0" layoutY="98.0" text="ASD00001" />
-      <JFXTextField layoutX="112.0" layoutY="233.0" prefHeight="31.0" prefWidth="290.0" />
-      <Label fx:id="lblMemberDuration" layoutX="705.0" layoutY="283.0" text="1 Day" />
-      <JFXTextArea layoutX="107.0" layoutY="394.0" prefHeight="91.0" prefWidth="382.0" />
-      <ImageView fitHeight="173.0" fitWidth="174.0" layoutX="972.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../asset/member-profile.png" />
-         </image>
-      </ImageView>
-      <JFXButton layoutX="596.0" layoutY="485.0" prefHeight="55.0" prefWidth="143.0" ripplerFill="#d1ee7f" style="-fx-background-color: #4fbf55;" text="Save">
-         <font>
-            <Font name="System Bold" size="19.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="1173.0" layoutY="485.0" prefHeight="55.0" prefWidth="143.0" ripplerFill="#f2b5a2" style="-fx-background-color: #ce6846;" text="Cancel">
-         <font>
-            <Font name="System Bold" size="19.0" />
-         </font>
-      </JFXButton>
-      <ImageView fitHeight="66.0" fitWidth="69.0" layoutX="245.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+      <RadioButton fx:id="rbtnFemale" layoutX="689.0" layoutY="129.0" mnemonicParsing="false" text="Female" toggleGroup="$gender" />
+      <JFXTextField fx:id="txtMemberEmail" layoutX="542.0" layoutY="194.0" prefHeight="31.0" prefWidth="239.0" />
+      <Label fx:id="lblmemberID" layoutX="210.0" layoutY="98.0" text="ASD00001" />
+      <JFXTextField fx:id="txtMemberName" layoutX="116.0" layoutY="151.0" prefHeight="31.0" prefWidth="290.0" />
+      <Label fx:id="lblMemberDuration" layoutX="1026.0" layoutY="292.0" text="1 Day" />
+      <JFXTextArea fx:id="txtMemberAddress" layoutX="111.0" layoutY="312.0" prefHeight="91.0" prefWidth="304.0" />
+      <ImageView fx:id="imgmemberCategory" fitHeight="110.0" fitWidth="183.0" layoutX="910.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../asset/free-membership.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="55.0" fitWidth="56.0" layoutX="245.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" />
-      <JFXButton fx:id="btnSaveAndUpdate" layoutX="799.0" layoutY="485.0" onAction="#navigateToMemberUpdation" prefHeight="55.0" prefWidth="319.0" ripplerFill="#95a475" style="-fx-background-color: #d0f486;" text="Save and Update Membership">
+      <Label fx:id="lblexpdate" layoutX="1044.0" layoutY="336.0" text="Date" />
+      <JFXButton fx:id="btnSave" layoutX="773.0" layoutY="494.0" onAction="#btnSaveAction" prefHeight="37.0" prefWidth="143.0" ripplerFill="#d1ee7f" style="-fx-background-color: #4fbf55; -fx-background-radius: 15px;" text="Save">
          <font>
-            <Font name="System Bold" size="19.0" />
+            <Font size="19.0" />
          </font>
       </JFXButton>
-      <Label fx:id="lblexpdate" layoutX="723.0" layoutY="327.0" text="Date" />
+      <JFXButton fx:id="btnSaveAndUpdate" layoutX="431.0" layoutY="494.0" onAction="#navigateToMemberUpdation" prefHeight="42.0" prefWidth="297.0" ripplerFill="#908c8c" style="-fx-background-color: #d0f486; -fx-background-radius: 15px;" text="Save and Update Membership">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnCancel" layoutX="954.0" layoutY="494.0" prefHeight="37.0" prefWidth="143.0" ripplerFill="#908c8c" style="-fx-background-color: #f8564e; -fx-background-radius: 15px;" text="Cancel">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="errorMemberName" layoutX="233.0" layoutY="130.0" text="Member Name is mandatory" textFill="#eb3131" />
+      <Label fx:id="errorMemberNIC" layoutX="238.0" layoutY="201.0" text="NIC is mandatory" textFill="#eb3131" />
+      <Label fx:id="errorMemberAddress" layoutX="238.0" layoutY="276.0" text="Address is mandatory" textFill="#eb3131" />
+      <Label fx:id="lblcategory" layoutX="1004.0" layoutY="249.0" text="Free" />
    </children>
 </AnchorPane>

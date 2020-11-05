@@ -1,4 +1,6 @@
 package bussiness.custom;
 
-public interface Renewal_PaymentBO {
+import bussiness.SuperBO;
+
+public interface Renewal_PaymentBO extends SuperBO {
 }

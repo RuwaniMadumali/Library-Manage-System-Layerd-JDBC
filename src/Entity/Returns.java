@@ -20,6 +20,46 @@ public class Returns implements SuperEntity{
         this.issueStaffID = issueStaffID;
     }
 
+    public String getIssueNo() {
+        return issueNo;
+    }
+
+    public void setIssueNo(String issueNo) {
+        this.issueNo = issueNo;
+    }
+
+    public String getBookID() {
+        return bookID;
+    }
+
+    public void setBookID(String bookID) {
+        this.bookID = bookID;
+    }
+
+    public Date getReturnDate() {
+        return returnDate;
+    }
+
+    public void setReturnDate(Date returnDate) {
+        this.returnDate = returnDate;
+    }
+
+    public Date getActualReturnDate() {
+        return actualReturnDate;
+    }
+
+    public void setActualReturnDate(Date actualReturnDate) {
+        this.actualReturnDate = actualReturnDate;
+    }
+
+    public String getIssueStaffID() {
+        return issueStaffID;
+    }
+
+    public void setIssueStaffID(String issueStaffID) {
+        this.issueStaffID = issueStaffID;
+    }
+
     @Override
     public String toString() {
         return "Returns{" +

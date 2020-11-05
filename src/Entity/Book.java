@@ -18,6 +18,17 @@ public class Book implements SuperEntity {
     public Book() {
     }
 
+    public Book(String bookID, String bCategoryID, String bName, String bAuthor, String bEdition, BigDecimal bPrice,  int bNoOfPages,String bDescription) {
+        this.bookID = bookID;
+        this.bCategoryID = bCategoryID;
+        this.bName = bName;
+        this.bDescription = bDescription;
+        this.bEdition = bEdition;
+        this.bAuthor = bAuthor;
+        this.bNoOfPages = bNoOfPages;
+        this.bPrice = bPrice;
+    }
+
     public Book(String bookID, String bCategoryID, String bName, String bDescription, String bEdition, String bAuthor, int bNoOfPages, BigDecimal bPrice, String pathToImage, Date bAddDate) {
         this.bookID = bookID;
         this.bCategoryID = bCategoryID;

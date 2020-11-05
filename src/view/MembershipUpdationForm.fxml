@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="root" prefHeight="618.0" prefWidth="1047.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MembershipUpdationController">
    <children>
       <Label layoutX="132.0" layoutY="32.0" text="Membership Updation">
@@ -17,7 +16,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <JFXButton layoutX="466.0" layoutY="473.0" prefHeight="55.0" prefWidth="395.0" ripplerFill="#d1ee7f" style="-fx-background-color: #4fbf55;" text="Update Membership">
+      <JFXButton fx:id="btnUpdateMembership" layoutX="466.0" layoutY="473.0" onAction="#updateMembershipOnAction" prefHeight="55.0" prefWidth="395.0" ripplerFill="#d1ee7f" style="-fx-background-color: #4fbf55;" text="Update Membership">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>
@@ -42,18 +41,18 @@
       </Button>
       <Label layoutX="121.0" layoutY="158.0" text="Member ID :" />
       <Label layoutX="121.0" layoutY="203.0" text="Member NIC No :" />
-      <Label layoutX="220.0" layoutY="158.0" text="ASD00001">
+      <Label fx:id="lblMemberID" layoutX="220.0" layoutY="158.0" text="ASD00001">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="255.0" layoutY="203.0" text="916690185v">
+      <Label fx:id="lblMemberNic" layoutX="255.0" layoutY="203.0" text="916690185v">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
       <Label layoutX="121.0" layoutY="240.0" text="Member Name :" />
-      <Label layoutX="240.0" layoutY="240.0" text="Ruwani Madumali">
+      <Label fx:id="lblmemnerName" layoutX="240.0" layoutY="240.0" text="Ruwani Madumali">
          <font>
             <Font size="18.0" />
          </font>
@@ -62,7 +61,7 @@
       <Label layoutX="552.0" layoutY="240.0" text="Select New Member Category : " />
       <JFXComboBox fx:id="memberCategoryCmbbx" layoutX="551.0" layoutY="279.0" onAction="#getComboSelection" prefHeight="31.0" prefWidth="212.0" />
       <Label layoutX="554.0" layoutY="351.0" text="Membership Fee : " />
-      <ImageView fitHeight="95.0" fitWidth="123.0" layoutX="799.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imgCurrentCategory" fitHeight="95.0" fitWidth="123.0" layoutX="799.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../asset/free-membership.png" />
          </image>
@@ -87,5 +86,11 @@
             <Image url="@../asset/bronze.png" />
          </image>
       </ImageView>
+      <Label layoutX="121.0" layoutY="281.0" text="Exp. Date    :" />
+      <Label fx:id="lblexpDate" layoutX="229.0" layoutY="278.0" text="Date">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

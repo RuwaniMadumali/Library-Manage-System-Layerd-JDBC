@@ -1,4 +1,6 @@
 package bussiness.custom;
 
-public interface Member_TypeBO {
+import bussiness.SuperBO;
+
+public interface Member_TypeBO extends SuperBO {
 }

@@ -1,6 +1,7 @@
 package dao.custom.impl;
 
 import Entity.Receipt;
+import dao.CrudUtil;
 import dao.custom.ReceiptDAO;
 
 import java.util.List;
@@ -17,8 +18,9 @@ public class ReceiptDAOImpl implements ReceiptDAO {
     }
 
     @Override
-    public boolean save(Receipt entity) throws Exception {
-        return false;
+    public boolean save(Receipt receipt) throws Exception {
+        return CrudUtil.execute("INSERT INTO Receipt VALUES (?,?,?,?,?)",receipt.getReciptNo(),
+                receipt.getReason(),receipt.getIssuedDate(),receipt.getIssuedStaffID(),receipt.getPaymentmood());
     }
 
     @Override

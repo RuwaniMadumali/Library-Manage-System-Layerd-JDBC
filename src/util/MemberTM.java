@@ -10,14 +10,14 @@ public class MemberTM {
     private String categoryId;
     private String address;
     private String email;
-    private int contactNo;
+    private String contactNo;
     private Date addDate;
     private Date expDate;
 
     public MemberTM() {
     }
 
-    public MemberTM(String id, String nic, String name, String gender, String categoryId, String address, String email, int contactNo, Date addDate, Date expDate) {
+    public MemberTM(String id, String nic, String name, String gender, String categoryId, String address, String email, String contactNo, Date addDate, Date expDate) {
         this.id = id;
         this.nic = nic;
         this.name = name;
@@ -78,11 +78,11 @@ public class MemberTM {
         this.email = email;
     }
 
-    public int getContactNo() {
+    public String getContactNo() {
         return contactNo;
     }
 
-    public void setContactNo(int contactNo) {
+    public void setContactNo(String contactNo) {
         this.contactNo = contactNo;
     }
 

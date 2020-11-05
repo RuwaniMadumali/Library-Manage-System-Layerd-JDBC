@@ -1,4 +1,6 @@
 package bussiness.custom.impl;
 
-public class Member_TypeBOImpl {
+import bussiness.custom.Member_TypeBO;
+
+public class Member_TypeBOImpl implements Member_TypeBO {
 }
